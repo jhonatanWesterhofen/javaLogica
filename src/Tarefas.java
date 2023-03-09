@@ -6,6 +6,9 @@ public class Tarefas {
 		
 		Scanner scanner = new Scanner(System.in);
 		
+		System.out.println("digite");
+		
+		
 		String[] tarefasDiarias = new String[5];
 		
 		for(int i = 0 ; i < tarefasDiarias.length ; i++) {
