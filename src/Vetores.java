@@ -20,6 +20,7 @@ public class Vetores {
 		System.out.println("Sabor escolhido: " + cardapio[sabor]);
 		
 		scanner.close();
+		//aletrando a posicao 3
 		cardapio[3] = "Milho";
 		
 		
