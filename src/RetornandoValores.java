@@ -1,8 +1,26 @@
 import java.util.Scanner;
 
-public class Parametros {
+public class RetornandoValores {
 
 	public static void main(String[] args) {
+		
+	
+	//Teste regra de tres
+//		
+//		Double [] premissaInicial = new Double[] {50.0, 100.0};
+//		Double proporcao = 20.0;
+//		
+//		Double resultadoFinal = regraDeTres(premissaInicial, proporcao);
+//		
+//		System.out.println("Resultado: " +resultadoFinal);
+//	}
+//	
+//	static Double regraDeTres(Double [] premissa, Double proporcao) {
+//		Double resultado = (premissa[0] * proporcao)/premissa[1];
+//		
+//		return resultado;
+//	}
+	
 			Scanner scanner = new Scanner(System.in);
 			
 			imprimirTraco();
@@ -12,9 +30,8 @@ public class Parametros {
 			imprimir("Escolha dentre os cursos abaixo");
 			
 			posicoesVetor(cursos);
-	
-			System.out.print("O curso que você deseja é o: ");
-			Integer posicaoCursoEscolhido = scanner.nextInt();
+		
+			Integer posicaoCursoEscolhido = recebeNumeroInteiro("O curso que você deseja: " ,scanner);
 			
 			Boolean posicaoValida = verificaPosicaoEscolhida(posicaoCursoEscolhido, cursos); 
 			
@@ -30,8 +47,7 @@ public class Parametros {
 			
 			posicoesVetor(formasPagamento);
 	
-			System.out.print("Sua forma de pagamento escolhida é: ");
-			Integer posicaoFormaPagamentoEscolhida = scanner.nextInt();
+			Integer posicaoFormaPagamentoEscolhida = recebeNumeroInteiro("Sua forma de pagamento escolhida é: " ,scanner);
 			
 			posicaoValida = verificaPosicaoEscolhida(posicaoFormaPagamentoEscolhida, formasPagamento);
 			
@@ -49,6 +65,13 @@ public class Parametros {
 			scanner.close();
 		}
 	
+	static Integer recebeNumeroInteiro (String texto, Scanner scanner) {
+		System.out.print("O curso que você deseja é o: ");
+		Integer numero = scanner.nextInt();
+		
+		return numero;
+	}
+		
 		static Boolean verificaPosicaoEscolhida(Integer posicao, String[]vetor) {
 			Boolean valida =   posicao >= 0 && posicao < vetor.length;
 			return valida;
@@ -73,9 +96,5 @@ public class Parametros {
 		static void imprimir(String texto) {
 			System.out.println(texto);
 		}
-			
-			
-		
-	
 
 }
